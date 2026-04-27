@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -399,14 +399,27 @@ font-size: 14px;
 }
 /* Responsive */
 @media (max-width: 767px) {
-.sidebar { display: none; }
-.mobile-nav { display: flex; }
-.main-content { margin-left: 0; padding: 16px; padding-bottom: 90px; }
-.dashboard-grid { grid-template-columns: repeat(2, 1fr); }
-.form-row { grid-template-columns: 1fr; }
-.plant-health-container { padding: 8px 12px; }
-.health-circle { width: 60px; height: 60px; }
-.health-emoji { font-size: 36px; }
+    .sidebar { display: none; }
+    .mobile-nav { display: flex; }
+    .main-content { margin-left: 0; padding: 16px; padding-bottom: 90px; }
+    .dashboard-grid { grid-template-columns: repeat(2, 1fr); }
+    .form-row { grid-template-columns: 1fr; }
+    .plant-health-container { padding: 8px 12px; }
+    
+    .health-circle { width: 60px; height: 60px; } 
+    
+    /* เพิ่มส่วนนี้เข้าไปเพื่อบังคับให้ตัวเลขอยู่กลางวงกลม 60px ของมือถือ */
+    .health-text { 
+        font-size: 16px; /* ลดขนาดตัวอักษรลงหน่อยให้สมดุลกับวงกลม */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+    
+    .health-emoji { font-size: 36px; }
 .detail-card {
 position: fixed;
 top: 50%;
@@ -952,7 +965,7 @@ rec3_title: "Nutrient Boost Scheduled", rec3_desc: "N levels trending down. Sche
 apply: "Apply", dismiss: "Dismiss", schedule: "Schedule", later: "Later"
 }
 };
-let currentLang = 'th';
+let currentLang = 'en';
 function updateLanguage() {
 document.querySelectorAll('[data-i18n]').forEach(el => {
 const key = el.getAttribute('data-i18n');
