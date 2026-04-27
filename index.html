@@ -406,20 +406,31 @@ font-size: 14px;
     .form-row { grid-template-columns: 1fr; }
     .plant-health-container { padding: 8px 12px; }
     
-    .health-circle { width: 60px; height: 60px; } 
-    
-    /* เพิ่มส่วนนี้เข้าไปเพื่อบังคับให้ตัวเลขอยู่กลางวงกลม 60px ของมือถือ */
+    .health-circle { 
+        width: 60px !important; 
+        height: 60px !important; 
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    } 
+
     .health-text { 
-        font-size: 16px; /* ลดขนาดตัวอักษรลงหน่อยให้สมดุลกับวงกลม */
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        text-align: center;
-        margin: 0;
+        position: relative !important; /* เปลี่ยนจาก absolute เป็น relative */
+        font-size: 14px !important;    /* ลดขนาดลงอีกนิดให้ดูพอดี */
+        top: 0 !important;             /* ล้างค่าเก่า */
+        left: 0 !important;            /* ล้างค่าเก่า */
+        transform: none !important;    /* ล้างการเยื้อง */
+        margin: 0 !important;
+        width: auto !important;
     }
-    
-    .health-emoji { font-size: 36px; }
+
+    .health-svg {
+        position: absolute; /* ให้วงกลมซ้อนอยู่ข้างหลังตัวเลข */
+        top: 0;
+        left: 0;
+        width: 60px;
+        height: 60px;
+    }
 .detail-card {
 position: fixed;
 top: 50%;
