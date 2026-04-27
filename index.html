@@ -399,6 +399,32 @@ font-size: 14px;
 }
 /* Responsive */
 @media (max-width: 767px) {
+/* แก้ไขส่วนนี้ใน @media (max-width: 767px) */
+
+.plant-health-container { 
+    padding: 8px 12px; 
+    /* เพิ่ม 3 บรรทัดนี้เพื่อบังคับให้ตรงกลาง */
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-end; /* ดันไปขวาสุดเหมือนเดิม */
+}
+
+.health-circle { 
+    width: 60px; 
+    height: 60px; 
+    /* เพิ่ม 3 บรรทัดนี้เพื่อให้วงกลมจัดกึ่งกลางตัวเอง */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.health-emoji { 
+    font-size: 36px; 
+    /* เพิ่ม 3 บรรทัดนี้เพื่อให้ Emoji ตรงกับวงกลม */
+    line-height: 1; 
+    display: flex;
+    align-items: center;
+}
 .sidebar { display: none; }
 .mobile-nav { display: flex; }
 .main-content { margin-left: 0; padding: 16px; padding-bottom: 90px; }
