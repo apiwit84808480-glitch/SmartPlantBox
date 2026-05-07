@@ -402,106 +402,98 @@ font-size: 14px;
 }
 /* Responsive */
 @media (max-width: 767px) {
-    .sidebar { display: none; }
-    .mobile-nav { display: flex; }
-    .main-content { margin-left: 0; padding: 16px; padding-bottom: 90px; }
-    .dashboard-grid { grid-template-columns: repeat(2, 1fr); }
-    .form-row { grid-template-columns: 1fr; }
-    .plant-health-container { padding: 8px 10px; gap: 8px; }
-
-    /* ===== Health Circle - วงกลมสุขภาพในมือถือ ===== */
-    .health-circle {
-        width: 56px !important;
-        height: 56px !important;
-        min-width: 56px !important;
-        position: relative !important;
-        flex-shrink: 0;
-        overflow: visible !important;
-    }
-    /* บังคับ SVG ให้ scale ลงพอดี container โดยใช้ viewBox เดิม (80x80)
-       เพื่อไม่ให้ stroke-dasharray (คำนวณจาก r=32) เพี้ยน */
-    .health-svg {
-        position: absolute !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 100% !important;
-        height: 100% !important;
-        display: block;
-        overflow: visible !important;
-    }
-    .health-text {
-        position: absolute !important;
-        top: 50% !important;
-        left: 50% !important;
-        transform: translate(-50%, -50%) !important;
-        font-size: 13px !important;
-        font-weight: 700 !important;
-        margin: 0 !important;
-        width: auto !important;
-        line-height: 1 !important;
-    }
-    .health-emoji { font-size: 36px; line-height: 1; }
-
-    /* ===== Header ===== */
-    .header { padding: 12px 14px; margin-bottom: 16px; border-radius: 16px; gap: 8px; }
-    .header-title { font-size: 18px; }
-    .header-controls { gap: 6px; }
-
-    /* ===== Plant Profile ===== */
-    .plant-profile { padding: 14px; border-radius: 16px; gap: 10px; }
-    .plant-info-left { gap: 10px; min-width: 0; flex: 1; }
-    .plant-avatar { width: 48px; height: 48px; font-size: 26px; border-radius: 12px; flex-shrink: 0; }
-    .plant-info { min-width: 0; }
-    .plant-info h2 { font-size: 18px; margin-bottom: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .plant-meta { font-size: 11px; gap: 8px; flex-wrap: wrap; }
-
-    /* ===== Stat Cards ===== */
-    .stat-card { padding: 14px; border-radius: 16px; }
-    .stat-label { font-size: 10px; margin-bottom: 4px; }
-    .stat-value { font-size: 24px; }
-    .stat-trend { font-size: 11px; }
-    .stat-icon { font-size: 14px; }
-
-    /* ===== Additional Button ===== */
-    .additional-btn { padding: 6px 14px; font-size: 12px; }
-
-    /* ===== Detail Card popup ===== */
-    .detail-card {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        min-width: 90%;
-        max-width: 95vw;
-        max-height: 85vh;
-        overflow-y: auto;
-    }
- }
-
- /* ===== Hide chart title & legend on mobile portrait ===== */
- @media (max-width: 767px) and (orientation: portrait) {
-     #chartTitle { display: none !important; }
-     #chartLegend { display: none !important; }
- }
- /* Restore them on mobile landscape */
- @media (max-width: 767px) and (orientation: landscape) {
-     #chartTitle { display: block !important; }
-     #chartLegend { display: flex !important; }
- }
-
- /* ===== Extra small screens (<=380px) ===== */
- @media (max-width: 380px) {
-    .main-content { padding: 12px; padding-bottom: 90px; }
-    .header-title { font-size: 16px; }
-    .stat-value { font-size: 20px; }
-    .plant-info h2 { font-size: 16px; }
-    .plant-avatar { width: 44px; height: 44px; font-size: 22px; }
-    .health-emoji { font-size: 30px; }
-    .health-circle { width: 50px !important; height: 50px !important; }
-    .health-text { font-size: 12px !important; }
-    .dashboard-grid { gap: 10px; }
-    .stat-card { padding: 12px; }
- }
+.sidebar { display: none; }
+.mobile-nav { display: flex; }
+.main-content { margin-left: 0; padding: 16px; padding-bottom: 90px; }
+.dashboard-grid { grid-template-columns: repeat(2, 1fr); }
+.form-row { grid-template-columns: 1fr; }
+.plant-health-container { padding: 8px 10px; gap: 8px; }
+/* ===== Health Circle - วงกลมสุขภาพในมือถือ ===== */
+.health-circle {
+width: 56px !important;
+height: 56px !important;
+min-width: 56px !important;
+position: relative !important;
+flex-shrink: 0;
+overflow: visible !important;
+}
+/* บังคับ SVG ให้ scale ลงพอดี container โดยใช้ viewBox เดิม (80x80)
+เพื่อไม่ให้ stroke-dasharray (คำนวณจาก r=32) เพี้ยน */
+.health-svg {
+position: absolute !important;
+top: 0 !important;
+left: 0 !important;
+width: 100% !important;
+height: 100% !important;
+display: block;
+overflow: visible !important;
+}
+.health-text {
+position: absolute !important;
+top: 50% !important;
+left: 50% !important;
+transform: translate(-50%, -50%) !important;
+font-size: 13px !important;
+font-weight: 700 !important;
+margin: 0 !important;
+width: auto !important;
+line-height: 1 !important;
+}
+.health-emoji { font-size: 36px; line-height: 1; }
+/* ===== Header ===== */
+.header { padding: 12px 14px; margin-bottom: 16px; border-radius: 16px; gap: 8px; }
+.header-title { font-size: 18px; }
+.header-controls { gap: 6px; }
+/* ===== Plant Profile ===== */
+.plant-profile { padding: 14px; border-radius: 16px; gap: 10px; }
+.plant-info-left { gap: 10px; min-width: 0; flex: 1; }
+.plant-avatar { width: 48px; height: 48px; font-size: 26px; border-radius: 12px; flex-shrink: 0; }
+.plant-info { min-width: 0; }
+.plant-info h2 { font-size: 18px; margin-bottom: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.plant-meta { font-size: 11px; gap: 8px; flex-wrap: wrap; }
+/* ===== Stat Cards ===== */
+.stat-card { padding: 14px; border-radius: 16px; }
+.stat-label { font-size: 10px; margin-bottom: 4px; }
+.stat-value { font-size: 24px; }
+.stat-trend { font-size: 11px; }
+.stat-icon { font-size: 14px; }
+/* ===== Additional Button ===== */
+.additional-btn { padding: 6px 14px; font-size: 12px; }
+/* ===== Detail Card popup ===== */
+.detail-card {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+min-width: 90%;
+max-width: 95vw;
+max-height: 85vh;
+overflow-y: auto;
+}
+}
+/* ===== Hide chart title & legend on mobile portrait ===== */
+@media (max-width: 767px) and (orientation: portrait) {
+#chartTitle { display: none !important; }
+#chartLegend { display: none !important; }
+}
+/* Restore them on mobile landscape */
+@media (max-width: 767px) and (orientation: landscape) {
+#chartTitle { display: block !important; }
+#chartLegend { display: flex !important; }
+}
+/* ===== Extra small screens (<=380px) ===== */
+@media (max-width: 380px) {
+.main-content { padding: 12px; padding-bottom: 90px; }
+.header-title { font-size: 16px; }
+.stat-value { font-size: 20px; }
+.plant-info h2 { font-size: 16px; }
+.plant-avatar { width: 44px; height: 44px; font-size: 22px; }
+.health-emoji { font-size: 30px; }
+.health-circle { width: 50px !important; height: 50px !important; }
+.health-text { font-size: 12px !important; }
+.dashboard-grid { gap: 10px; }
+.stat-card { padding: 12px; }
+}
 /* ===== AI INTELLIGENCE PAGE ===== */
 @keyframes ai-pulse { 0%,100% { opacity:1; } 50% { opacity:0.5; } }
 @keyframes ai-pulse-ring { 0% { transform:scale(0.8); opacity:1; } 100% { transform:scale(1.3); opacity:0; } }
@@ -743,18 +735,27 @@ stroke-dasharray="201.06" stroke-dashoffset="50.27" id="healthProgress"></circle
 <div class="header" style="margin-bottom:20px;">
 <h2 style="font-size:24px; font-weight:700;" data-i18n="select_plant">Select Plant Profile</h2>
 </div>
-<div class="plants-grid" id="plantsGrid"></div>
-</div>
+<div class="plants-grid" id="plantsGrid"></div></div>
 <!-- CAMERA PAGE -->
 <div id="camera" class="page">
 <div class="camera-container" style="max-width: 1200px; width: 95%; margin: 0 auto;">
-<div class="camera-preview" id="camera-stream" style="padding:0; overflow:hidden; background: #000; border-radius: 15px; height: 600px; display: flex; align-items: center;">
+<!-- ส่วนแสดงภาพสดจากกล้อง -->
+<div class="camera-preview" id="camera-stream" style="padding:0; overflow:hidden; background: #000; border-radius: 15px; height: 500px;">
 <img src="{{ url_for('video_feed') }}" style="width: 100%; height: 100%; object-fit: contain; display: block; margin: 0 auto;">
 </div>
 </div>
-<div style="display:flex; justify-content:center; gap:16px;">
-<button class="cam-btn primary" onclick="takePhoto()"><i class="fas fa-camera"></i> <span data-i18n="snap">Snapshot & AI Analyze</span></button>
-<button class="cam-btn secondary"><i class="fas fa-sync"></i> <span data-i18n="refresh">Refresh Stream</span></button>
+<!-- ปุ่มควบคุม -->
+<div style="display:flex; justify-content:center; gap:16px; margin-top: 20px;">
+<!-- ปุ่ม Snapshot & Save: กดแล้วรูปจะเด้งโหลดลงเครื่องคอมคุณทันที -->
+<button class="cam-btn primary" onclick="window.location.href='/capture'">
+<i class="fas fa-camera"></i>
+<span data-i18n="snap">Snapshot & Save</span>
+</button>
+<!-- ปุ่ม Refresh: กดเพื่อรีโหลดหน้าเว็บใหม่ -->
+<button class="cam-btn secondary" onclick="location.reload()">
+<i class="fas fa-sync"></i>
+<span data-i18n="refresh">Refresh</span>
+</button>
 </div>
 </div>
 <!-- HISTORY PAGE -->
@@ -852,10 +853,31 @@ stroke-dasharray="201.06" stroke-dashoffset="50.27" id="healthProgress"></circle
 </div>
 </div>
 </div>
-<div style="display:flex; flex-direction:column; gap:8px; margin-top:12px;">
-<div class="ai-result-row"><div class="ai-result-icon" style="background:rgba(16,185,129,0.2); color:var(--accent-green);"><i class="fas fa-check"></i></div><div style="flex:1;"><div class="ai-result-title" data-i18n="leaf_health">Leaf Health</div><div class="ai-result-desc" data-i18n="no_necrosis">No visible necrosis</div></div><div style="color:var(--accent-green); font-weight:700;">98%</div></div>
-<div class="ai-result-row"><div class="ai-result-icon" style="background:rgba(59,130,246,0.2); color:#3b82f6;"><i class="fas fa-tint"></i></div><div style="flex:1;"><div class="ai-result-title" data-i18n="hydration">Hydration Status</div><div class="ai-result-desc" data-i18n="turgor_ok">Turgor pressure optimal</div></div><div style="color:#3b82f6; font-weight:700;">94%</div></div>
-<div class="ai-result-row"><div class="ai-result-icon" style="background:rgba(249,115,22,0.2); color:#f97316;"><i class="fas fa-sun"></i></div><div style="flex:1;"><div class="ai-result-title" data-i18n="chlorophyll">Chlorophyll Index</div><div class="ai-result-desc">SPAD: 42.3</div></div><div style="color:#f97316; font-weight:700;">88%</div></div>
+<!-- ✅ 1. ปุ่ม Analyze เชื่อมโยงฟังก์ชัน -->
+<div style="margin-top:12px;">
+<button id="analyze-btn" class="ai-btn ai-btn-green" onclick="analyzePlantHealth()" disabled style="opacity:0.5; cursor:not-allowed;">
+<i class="fas fa-microscope"></i> Analyze Plant Health
+</button>
+</div>
+<div id="ai-results-container" style="display:flex; flex-direction:column; gap:12px; margin-top:16px;">
+<!-- ✅ 2. ID สำหรับการอัปเดตข้อมูล -->
+<div class="ai-result-row">
+<div class="ai-result-icon" style="background:rgba(16,185,129,0.2); color:var(--accent-green);"><i class="fas fa-virus"></i></div>
+<div style="flex:1;">
+<div class="ai-result-title">Diagnosis</div>
+<div class="ai-result-desc" id="ai-diagnosis-text">Waiting for analysis...</div>
+</div>
+</div>
+<div class="ai-result-row">
+<div class="ai-result-icon" style="background:rgba(59,130,246,0.2); color:#3b82f6;"><i class="fas fa-bullseye"></i></div>
+<div style="flex:1;">
+<div class="ai-result-title">AI Confidence</div>
+<div id="ai-confidence-bar-container" style="width:100%; height:8px; background:rgba(255,255,255,0.1); border-radius:4px; margin-top:8px;">
+<div id="ai-confidence-bar" style="width:0%; height:100%; background:#3b82f6; border-radius:4px; transition:width 1s ease;"></div>
+</div>
+</div>
+<div style="color:#3b82f6; font-weight:700; margin-left:10px;" id="ai-confidence-text">0%</div>
+</div>
 </div>
 <div class="ai-insight-box ai-insight-green">
 <i class="fas fa-shield-alt" style="color:var(--accent-green); margin-top:2px;"></i>
@@ -865,8 +887,8 @@ stroke-dasharray="201.06" stroke-dashoffset="50.27" id="healthProgress"></circle
 <div class="ai-card">
 <div class="ai-card-header">
 <div>
-<h3><i class="fas fa-chart-line" style="color:var(--accent-teal);"></i> <span data-i18n="growth_prediction">Growth Prediction</span></h3>
-<p data-i18n="growth_desc">ML forecast based on sensor fusion</p>
+<h3><i class="fas fa-chart-line" style="color:var(--accent-teal);"></i> <span id="ai-confidence-chart-title">AI Confidence over time</span></h3>
+<p>Tracking AI confidence as treatment progresses</p>
 </div>
 </div>
 <div style="height:160px; position:relative;"><canvas id="growthChart"></canvas></div>
@@ -881,39 +903,25 @@ stroke-dasharray="201.06" stroke-dashoffset="50.27" id="healthProgress"></circle
 </div>
 </div>
 </div>
-<div class="ai-grid-2">
+<div class="ai-grid-2" id="ai-post-analysis" style="display:none;">
 <div class="ai-card">
-<h3 style="font-weight:600; color:var(--text-primary); display:flex; align-items:center; gap:8px; margin-bottom:6px;"><i class="fas fa-project-diagram" style="color:#a855f7;"></i> <span data-i18n="correlation_matrix">Sensor Correlation Matrix</span></h3>
-<p style="font-size:11px; color:var(--text-muted); margin-bottom:14px;" data-i18n="correlation_desc">AI-weighted factors influencing growth</p>
-<div style="display:flex; flex-direction:column; gap:14px;">
-<div><div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:6px;"><span style="color:var(--text-secondary);">Light → Growth Rate</span><span style="color:var(--accent-green);">+0.87</span></div><div class="ai-corr-bar"><div style="width:87%; background:linear-gradient(to right,#059669,#10b981);"></div></div></div>
-<div><div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:6px;"><span style="color:var(--text-secondary);">Soil Moisture → Leaf Health</span><span style="color:#3b82f6;">+0.82</span></div><div class="ai-corr-bar"><div style="width:82%; background:linear-gradient(to right,#2563eb,#3b82f6);"></div></div></div>
-<div><div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:6px;"><span style="color:var(--text-secondary);">NPK → Height Velocity</span><span style="color:var(--accent-teal);">+0.79</span></div><div class="ai-corr-bar"><div style="width:79%; background:linear-gradient(to right,#0d9488,#14b8a6);"></div></div></div>
-<div><div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:6px;"><span style="color:var(--text-secondary);">Temp Variance → Disease</span><span style="color:#f97316;">-0.64</span></div><div class="ai-corr-bar"><div style="width:64%; background:linear-gradient(to right,#ea580c,#f97316);"></div></div></div>
+<h3 style="font-weight:600; color:var(--text-primary); display:flex; align-items:center; gap:8px; margin-bottom:6px;"><i class="fas fa-microscope" style="color:#a855f7;"></i> <span>AI Health Diagnostics</span></h3>
+<p style="font-size:11px; color:var(--text-muted); margin-bottom:14px;">Why the AI predicted this condition</p>
+<div id="ai-diagnostics-list" style="display:flex; flex-direction:column; gap:14px;">
+<div><div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:6px;"><span style="color:var(--text-secondary);">Spot Pattern Matching</span><span style="color:var(--accent-green);">+0.87</span></div><div class="ai-corr-bar"><div style="width:87%; background:linear-gradient(to right,#059669,#10b981);"></div></div></div>
+<div><div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:6px;"><span style="color:var(--text-secondary);">Color Discoloration</span><span style="color:#3b82f6;">+0.82</span></div><div class="ai-corr-bar"><div style="width:82%; background:linear-gradient(to right,#2563eb,#3b82f6);"></div></div></div>
+<div><div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:6px;"><span style="color:var(--text-secondary);">Necrosis Area</span><span style="color:var(--accent-teal);">+0.79</span></div><div class="ai-corr-bar"><div style="width:79%; background:linear-gradient(to right,#0d9488,#14b8a6);"></div></div></div>
 </div>
-<div class="ai-insight-box" style="background:rgba(168,85,247,0.1); border:1px solid rgba(168,85,247,0.2);">
+<div class="ai-insight-box" style="background:rgba(168,85,247,0.1); border:1px solid rgba(168,85,247,0.2); margin-top:14px;">
 <i class="fas fa-lightbulb" style="color:#a855f7; margin-top:2px;"></i>
-<div><div style="font-size:13px; font-weight:600; color:#a855f7;" data-i18n="ai_insight">AI Insight</div><p style="font-size:11px; color:var(--text-secondary); margin-top:4px;" data-i18n="ai_insight_desc">Increasing light by 15% could accelerate max growth by 3 days.</p></div>
+<div><div style="font-size:13px; font-weight:600; color:#a855f7;">AI Insight</div><p id="ai-diagnostics-insight" style="font-size:11px; color:var(--text-secondary); margin-top:4px;">Visual markers strongly indicate the diagnosed condition.</p></div>
 </div>
 </div>
 <div class="ai-card">
-<h3 style="font-weight:600; color:var(--text-primary); display:flex; align-items:center; gap:8px; margin-bottom:14px;"><i class="fas fa-magic" style="color:#ec4899;"></i> <span data-i18n="smart_recs">Smart Recommendations</span></h3>
-<div style="display:flex; flex-direction:column; gap:10px;">
-<div class="ai-rec" style="border-left:3px solid var(--accent-green);">
-<div class="ai-rec-icon" style="background:rgba(16,185,129,0.2); color:var(--accent-green);"><i class="fas fa-tint"></i></div>
-<div style="flex:1;"><div class="ai-rec-title" data-i18n="rec1_title">Increase Fogger Duration</div><p class="ai-rec-desc" data-i18n="rec1_desc">Humidity 76.3% below optimal (80-85%). Extend fogger 10 mins.</p>
-<div style="display:flex; gap:8px; margin-top:8px;"><button class="ai-rec-btn ai-rec-btn-green" data-i18n="apply">Apply</button><button class="ai-rec-btn ai-rec-btn-ghost" data-i18n="dismiss">Dismiss</button></div></div>
-</div>
-<div class="ai-rec" style="border-left:3px solid #f97316;">
-<div class="ai-rec-icon" style="background:rgba(249,115,22,0.2); color:#f97316;"><i class="fas fa-sun"></i></div>
-<div style="flex:1;"><div class="ai-rec-title" data-i18n="rec2_title">Adjust Light Spectrum</div><p class="ai-rec-desc" data-i18n="rec2_desc">Shifting to 75% red spectrum could boost growth by 12%.</p>
-<div style="display:flex; gap:8px; margin-top:8px;"><button class="ai-rec-btn ai-rec-btn-orange" data-i18n="apply">Apply</button><button class="ai-rec-btn ai-rec-btn-ghost" data-i18n="dismiss">Dismiss</button></div></div>
-</div>
-<div class="ai-rec" style="border-left:3px solid #3b82f6;">
-<div class="ai-rec-icon" style="background:rgba(59,130,246,0.2); color:#3b82f6;"><i class="fas fa-flask"></i></div>
-<div style="flex:1;"><div class="ai-rec-title" data-i18n="rec3_title">Nutrient Boost Scheduled</div><p class="ai-rec-desc" data-i18n="rec3_desc">N levels trending down. Schedule NPK boost for tomorrow?</p>
-<div style="display:flex; gap:8px; margin-top:8px;"><button class="ai-rec-btn ai-rec-btn-blue" data-i18n="schedule">Schedule</button><button class="ai-rec-btn ai-rec-btn-ghost" data-i18n="later">Later</button></div></div>
-</div>
+<h3 style="font-weight:600; color:var(--text-primary); display:flex; align-items:center; gap:8px; margin-bottom:14px;"><i class="fas fa-magic" style="color:#ec4899;"></i> <span>Smart Recommendations</span></h3>
+<!-- ✅ 3. ID สำหรับอัปเดตคำแนะนำ -->
+<div id="ai-recs-list" style="display:flex; flex-direction:column; gap:10px;">
+<div style="font-size:12px; color:var(--text-muted); text-align:center; padding:20px;">Upload a leaf photo and click Analyze to get treatment recommendations.</div>
 </div>
 </div>
 </div>
@@ -1078,18 +1086,18 @@ window.dailyChart.update();
 };
 /* Navigation - FIXED VERSION */
 function showPage(pageId) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.getElementById(pageId).classList.add('active');
-    document.querySelectorAll('.nav-item, .mobile-nav-item').forEach(item => {
-        item.classList.toggle('active', item.getAttribute('data-page') === pageId);
-    });
-    // FIX: หน่วงเวลาเล็กน้อยก่อน Scroll เพื่อให้หน้าโหลดเสร็จ
-    setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: 'instant' });
-        document.documentElement.scrollTop = 0;
-        document.body.scrollTop = 0;
-    }, 10);
-    updateLanguage();
+document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+document.getElementById(pageId).classList.add('active');
+document.querySelectorAll('.nav-item, .mobile-nav-item').forEach(item => {
+item.classList.toggle('active', item.getAttribute('data-page') === pageId);
+});
+// FIX: หน่วงเวลาเล็กน้อยก่อน Scroll เพื่อให้หน้าโหลดเสร็จ
+setTimeout(() => {
+window.scrollTo({ top: 0, behavior: 'instant' });
+document.documentElement.scrollTop = 0;
+document.body.scrollTop = 0;
+}, 10);
+updateLanguage();
 }
 function setMode(mode) {
 const isManual = mode === 'manual';
@@ -1501,7 +1509,7 @@ if (aiHeightChart || !document.getElementById('heightChart')) return;
 const ctxH = document.getElementById('heightChart').getContext('2d');
 aiHeightChart = new Chart(ctxH, {
 type: 'line',
-data: { labels: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'], datasets: [{ label:'Height', data:[22.1,22.4,22.9,23.2,23.8,24.1,24.5], borderColor:'#10b981', backgroundColor:'rgba(16,185,129,0.15)', borderWidth:2, tension:0.4, fill:true, pointRadius:0, pointHoverRadius:4 }] },
+data: { labels: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'], datasets: [{ label:'Height', data: [22.1,22.4,22.9,23.2,23.8,24.1,24.5], borderColor:'#10b981', backgroundColor:'rgba(16,185,129,0.15)', borderWidth:2, tension:0.4, fill:true, pointRadius:0, pointHoverRadius:4 }] },
 options: { responsive:true, maintainAspectRatio:false, plugins:{ legend:{display:false} }, scales:{ x:{display:false}, y:{display:false, min:20, max:26} }, interaction:{intersect:false} }
 });
 const ctxG = document.getElementById('growthChart').getContext('2d');
@@ -1528,13 +1536,131 @@ overlay.classList.add('ai-hidden'); placeholder.classList.remove('ai-hidden'); b
 const newH = (24.5 + Math.random()*0.8).toFixed(1); document.getElementById('current-height').textContent = newH;
 }, 2500);
 }
+// ================== 4 จุดสำคัญของการซิงโครไนซ์ AI ==================
+// ✅ 4. ตัวแปรส่วนกลางสำหรับ Health Score จาก AI
+let aiDetectedHealthScore = null;
+// ✅ 2 & 4. ฟังก์ชันอัปเดต Health UI (Sync หน้า Dashboard)
+function updateHealthUI(score) {
+aiDetectedHealthScore = score;
+const progress = document.getElementById('healthProgress');
+const percentText = document.getElementById('healthPercent');
+const emoji = document.getElementById('healthEmoji');
+const circumference = 201.06;
+const offset = circumference - (score / 100) * circumference;
+progress.classList.remove('health-excellent','health-very-good','health-good','health-fair','health-poor');
+percentText.classList.remove('health-excellent','health-very-good','health-good','health-fair','health-poor');
+if (score >= 90) { progress.classList.add('health-excellent'); percentText.classList.add('health-excellent'); emoji.textContent = '😁'; }
+else if (score >= 75) { progress.classList.add('health-very-good'); percentText.classList.add('health-very-good'); emoji.textContent = '😄'; }
+else if (score >= 50) { progress.classList.add('health-good'); percentText.classList.add('health-good'); emoji.textContent = '🙂'; }
+else if (score >= 25) { progress.classList.add('health-fair'); percentText.classList.add('health-fair'); emoji.textContent = '😐'; }
+else { progress.classList.add('health-poor'); percentText.classList.add('health-poor'); emoji.textContent = '😞'; }
+progress.style.strokeDashoffset = offset;
+percentText.textContent = Math.round(score) + '%';
+}
+// ✅ 3. ฟังก์ชันเปลี่ยน Smart Recommendations ตามโรค
+function updateRecommendations(diseaseName) {
+const list = document.getElementById('ai-recs-list');
+if (!list) return;
+let recs = [];
+const d = (diseaseName || '').toLowerCase();
+if (d.includes('late blight')) {
+recs = [
+{ color:'#ef4444', icon:'fa-scissors', title:'Remove Infected Leaves', desc:'Cut and destroy all leaves with dark water-soaked spots. Do not compost.' },
+{ color:'#f97316', icon:'fa-spray-can', title:'Apply Copper Fungicide', desc:'Spray copper-based fungicide every 5–7 days until symptoms stop spreading.' },
+{ color:'#3b82f6', icon:'fa-wind', title:'Reduce Humidity', desc:'Improve airflow and lower fogger duty cycle. Late blight thrives above 85% RH.' }
+];
+} else if (d.includes('early blight')) {
+recs = [
+{ color:'#f97316', icon:'fa-leaf', title:'Prune Lower Leaves', desc:'Remove older infected leaves near soil to slow spread.' },
+{ color:'#10b981', icon:'fa-spray-can', title:'Apply Chlorothalonil', desc:'Apply protective fungicide every 7–10 days.' }
+];
+} else if (d.includes('leaf mold')) {
+recs = [
+{ color:'#3b82f6', icon:'fa-wind', title:'Increase Ventilation', desc:'Lower humidity below 80% and improve airflow.' },
+{ color:'#10b981', icon:'fa-spray-can', title:'Apply Fungicide', desc:'Spray with chlorothalonil or copper fungicide.' }
+];
+} else if (d.includes('healthy')) {
+recs = [
+{ color:'#10b981', icon:'fa-check', title:'No Action Needed', desc:'Plant looks healthy. Continue current schedule.' },
+{ color:'#3b82f6', icon:'fa-calendar', title:'Re-scan in 3 Days', desc:'Routine check helps catch early symptoms.' }
+];
+} else {
+recs = [
+{ color:'#f97316', icon:'fa-triangle-exclamation', title:'Disease Detected: '+diseaseName, desc:'Isolate affected plants and consult an agronomist for the recommended treatment.' },
+{ color:'#3b82f6', icon:'fa-spray-can', title:'Apply Broad-Spectrum Fungicide', desc:'Use a general-purpose fungicide while confirming the exact pathogen.' },
+{ color:'#10b981', icon:'fa-wind', title:'Adjust Environment', desc:'Reduce humidity and increase airflow to slow pathogen growth.' }
+];
+}
+list.innerHTML = recs.map(r => `
+<div class="ai-rec" style="border-left:3px solid ${r.color};">
+<div class="ai-rec-icon" style="background:${r.color}33; color:${r.color};"><i class="fas ${r.icon}"></i></div>
+<div style="flex:1;">
+<div class="ai-rec-title">${r.title}</div>
+<p class="ai-rec-desc">${r.desc}</p>
+</div>
+</div>`).join('');
+}
+// ✅ 1 & 2 & 3 & 4. ฟังก์ชันหลัก Analyze ส่งข้อมูลไป Pi และอัปเดต UI
+async function analyzePlantHealth() {
+    const fileInput = document.getElementById('disease-input');
+    if (!fileInput.files[0]) return alert("Please select an image first!");
+
+    const formData = new FormData();
+    formData.append('file', fileInput.files[0]);
+
+    // 1. แสดงสถานะว่ากำลังวิเคราะห์ (จาก ID ในหน้า 36)
+    document.getElementById('disease-scan-overlay').classList.remove('ai-hidden');
+    document.getElementById('ai-diagnosis-text').innerText = "Analyzing...";
+
+    try {
+        // 2. ส่งไฟล์ไปที่ Raspberry Pi (Endpoint ที่เราตั้งไว้ใน app.py)
+        const response = await fetch('/analyze', {
+            method: 'POST',
+            body: formData
+        });
+        const data = await response.json();
+
+        // 3. นำข้อมูลที่ได้จาก AI มาอัปเดตหน้าจอ (ตรงกับ ID ในหน้า 37-38)
+        document.getElementById('ai-diagnosis-text').innerText = data.diagnosis;
+        document.getElementById('ai-confidence-text').innerText = data.confidence;
+        document.getElementById('ai-confidence-bar').style.width = data.confidence;
+
+        // 4. เปลี่ยนคำแนะนำ (Recommendations) ตามโรค (หน้า 40)
+        const recList = document.getElementById('ai-recs-list');
+        recList.innerHTML = `
+            <div class="ai-rec">
+                <div class="ai-rec-icon ai-rec-btn-orange"><i class="fas fa-medkit"></i></div>
+                <div style="flex:1;">
+                    <div class="ai-rec-title">AI Recommendation</div>
+                    <div class="ai-rec-desc">${data.suggestion || 'Follow standard treatment for ' + data.diagnosis}</div>
+                </div>
+            </div>
+        `;
+
+        // 5. แสดงส่วนผลลัพธ์ (หน้า 39)
+        document.getElementById('ai-post-analysis').style.display = 'grid';
+
+    } catch (error) {
+        console.error("Error:", error);
+        alert("Failed to connect to AI server!");
+    } finally {
+        // ปิดสแกนเนอร์
+        document.getElementById('disease-scan-overlay').classList.add('ai-hidden');
+    }
+}
+// ฟังก์ชันอัปโหลดรูป (แค่แสดงพรีวิว + เปิดปุ่ม Analyze)
 function handleDiseaseUpload(event) {
 const file = event.target.files[0]; if (!file) return;
-const preview = document.getElementById('disease-preview'); const scan = document.getElementById('disease-scan-overlay'); const placeholder = document.getElementById('disease-placeholder');
+const preview = document.getElementById('disease-preview');
+const placeholder = document.getElementById('disease-placeholder');
+const btn = document.getElementById('analyze-btn');
 const reader = new FileReader();
 reader.onload = (e) => {
-preview.src = e.target.result; preview.classList.remove('ai-hidden'); placeholder.classList.add('ai-hidden'); scan.classList.remove('ai-hidden');
-setTimeout(() => scan.classList.add('ai-hidden'), 3000);
+preview.src = e.target.result; preview.classList.remove('ai-hidden'); placeholder.classList.add('ai-hidden');
+// ✅ เปิดใช้งานปุ่ม Analyze เมื่อมีรูป
+btn.disabled = false;
+btn.style.opacity = '1';
+btn.style.cursor = 'pointer';
 };
 reader.readAsDataURL(file);
 }
